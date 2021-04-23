@@ -8,5 +8,5 @@ class EmployeeAdmin(admin.ModelAdmin):
 
 @admin.register(Record)
 class RecordAdmin(admin.ModelAdmin):
-    list_display = [ "employee", "arrive_time",'exit_time']
-    search_fields = [ "employee_id", "arrive_time",'exit_time']
+    list_display = [ "id","employee", "arrive_time",'exit_time']
+    search_fields = [ "id","employee_id", "arrive_time",'exit_time']

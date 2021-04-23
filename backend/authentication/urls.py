@@ -6,13 +6,13 @@ from django.urls import include, path
 
 
 router = routers.DefaultRouter()
-router.register('v1/auth', AuthViewSet)
+router.register('auth', AuthViewSet)
 
 urlpatterns = []
 
 app_name = 'authentication'
 urlpatterns += router.urls
 urlpatterns += [
-    path('v1/auth/token/', UserToken.as_view(), name='token'),
-    path('v1/auth/', include('rest_framework_social_oauth2.urls')),
+    path('auth/login/', UserToken.as_view(), name='token'),
+    path('auth/', include('rest_framework_social_oauth2.urls')),
 ]
