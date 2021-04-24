@@ -1,0 +1,14 @@
+$padding: 30px;
+$padding-s: 16px;
+
+.container {
+  max-width: calc(1300px + #{$padding + $padding});
+  margin: 0 auto;
+  padding-right: $padding;
+  padding-left: $padding;
+
+  @media all and (max-width: 550px) {
+    padding-right: $padding-s;
+    padding-left: $padding-s;
+  }
+}
