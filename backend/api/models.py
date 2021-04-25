@@ -19,10 +19,12 @@ class Employee(models.Model):
     @property
     def flex_status(self):
         return self.req_hours - self.work_hours
-    
     @property
     def records_count(self):
         return self.records.count()
+    @property
+    def absent_count(self):
+        return self.absent_records.count()
 
 
 class Record(models.Model):
