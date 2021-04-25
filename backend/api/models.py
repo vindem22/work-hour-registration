@@ -10,6 +10,8 @@ class Employee(models.Model):
     email = models.EmailField(max_length=100, unique=True)
     first_name = models.CharField(max_length=191, blank=True, null=True)
     last_name = models.CharField(max_length=191, blank=True, null=True)
+
+
     class Meta:
         verbose_name = 'Employee'
         verbose_name_plural = 'Employees'
@@ -17,6 +19,10 @@ class Employee(models.Model):
     @property
     def flex_status(self):
         return self.req_hours - self.work_hours
+    
+    @property
+    def records_count(self):
+        return self.records.count()
 
 
 class Record(models.Model):
@@ -28,6 +34,8 @@ class Record(models.Model):
     class Meta:
         verbose_name = 'Record'
         verbose_name_plural = 'Records'
+
+
 class AbsenseRecord(models.Model):   
     employee = models.ForeignKey(Employee,on_delete=models.CASCADE,related_name="absent_records") 
     comment = models.TextField()

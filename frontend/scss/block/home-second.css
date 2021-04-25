@@ -1,0 +1,144 @@
+.home-second__common {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-second__col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Mulish;
+}
+
+.home-second__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+  margin-left: 150px;
+  text-align: center;
+}
+
+.home-second__item {
+  border: 1px solid #dfe0eb;
+  border-radius: 8px;
+  padding: 20px 32px;
+}
+
+.home-second__item + .home-second__item {
+  margin-left: 40px;
+}
+
+.home-second__item:hover, .home-second__item:focus {
+  border-color: #008eff;
+}
+
+.home-second__text {
+  font-size: 19px;
+}
+
+.home-second__text:hover, .home-second__text:focus {
+  color: #008eff;
+}
+
+.home-second__suntext {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.home-second__col-2 {
+  font-family: "Open Sans" sans-serif;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.home-second__text1 {
+  font-size: 16px;
+}
+
+.home-second__table {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-collapse: collapse;
+}
+
+.home-second__tr {
+  padding: 20px;
+  font-family: "Lato";
+  color: black;
+  font-weight: 400;
+}
+
+.home-second__th {
+  padding: 20px;
+}
+
+.home-second__record {
+  border: 1px solid #2196f3;
+  background-color: #2196f3;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.home-second__img {
+  display: block;
+}
+
+.home-second__email {
+  margin-left: 15px;
+}
+
+.home-second__td {
+  padding: 20px;
+}
+
+.home-second__td--first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+}
+
+.home-second__btn {
+  outline: none;
+}
+
+.home-second__icon {
+  border: 1px solid white;
+  display: block;
+  margin-left: 60px;
+}
+
+.home-second__icon:hover > path, .home-second__icon:focus {
+  fill: #008eff;
+}
+
+.all {
+  border: 1px solid #dbdde0;
+  color: #52575c;
+  font-family: "Lato" sans-serif;
+}
+/*# sourceMappingURL=home-second.css.map */

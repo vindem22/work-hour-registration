@@ -1,0 +1,17 @@
+@mixin input-field {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    width: 100%;
+    input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+    input::placeholder {
+        text-transform: uppercase;
+    }
+}

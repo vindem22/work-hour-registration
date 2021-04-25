@@ -1,3 +1,4 @@
+
 "use strict";
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
@@ -67,3 +68,35 @@ document.addEventListener("keydown", function (e) {
 //     modal.classList.remove('hidden');
 //     overlay.classList.remove('hidden');
 //   });
+
+
+
+const addRow = function() {
+    const headers = document.getElementById('table__headers')
+    let newRecord = `
+    <tr class="all">
+      <td class="home-second__td home-second__td--first">
+          <img src="./img/5.svg" alt="" class="home-second__img" />
+          <p class="home-second__email">dastanahmet@gmail.com</p>
+      </td>
+      <td class="home-second__td">10/10/2020</td>
+      <td class="home-second__td">09:15</td>
+      <td class="home-second__td">09:15</td>
+      <td class="home-second__td">8 hours</td>
+      <td class="home-second__td">NOT CHANGED</td>
+      <td class="home-second__td">No problem today</td>
+
+      <td>
+          <button class="home-second__btn">
+          <img
+              src="/img/8.svg"
+              alt=""
+              class="home-second__icon"
+          />
+          </button>
+      </td>
+    </tr>
+    `
+    headers.insertAdjacentHTML('afterend',newRecord)
+    console.log(newRecord)
+}

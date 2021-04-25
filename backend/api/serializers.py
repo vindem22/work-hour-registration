@@ -4,7 +4,6 @@ from api.models import AbsenseRecord, Employee, Record
 from rest_framework import serializers
 from authentication.exceptions import CustomValidationError
 class EmployeeSerializer(serializers.ModelSerializer):
-    flex_status = serializers.IntegerField()
 
     class Meta:
         model = Employee
@@ -15,7 +14,8 @@ class EmployeeSerializer(serializers.ModelSerializer):
             'req_hours',
             'work_hours',
             'email',
-            'flex_status'
+            'flex_status',
+            'records_count'
         )
 
 class RecordSerializer(serializers.ModelSerializer):
