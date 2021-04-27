@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.admin {
+  width: 100%;
+  height: 100vh;
+  background-color: #fbfcfd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  font-family: "Roboto";
+}
+
+.admin__page-name {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.admin .sidebar {
+  width: 20%;
+  background: white;
+  border: 1px solid #E0E0E0;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.admin .sidebar .nav-items__nav-item:hover {
+  background-color: #E3F2FD;
+  cursor: pointer;
+}
+
+.admin .sidebar .nav-items__nav-item--active {
+  background-color: #E3F2FD;
+  cursor: pointer;
+}
+
+.admin .sidebar .nav-items__nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.admin .sidebar .nav-items__nav-item img {
+  width: 2rem;
+  margin-right: auto;
+}
+
+.admin .sidebar .nav-items__nav-item span {
+  width: 70%;
+  margin-left: auto;
+}
+
+.admin .sidebar__user-name {
+  width: 100%;
+}
+
+.admin .sidebar__user-avatar {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.admin .sidebar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  font-size: 20px;
+  height: 18%;
+  padding: 1.5rem;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.admin .sidebar__nav-items {
+  padding: 1rem;
+  height: 11%;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.admin .sidebar__nav-items li {
+  padding: 0.6rem;
+}
+
+.admin .sidebar__settings-text {
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.admin .sidebar__settings-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+.admin .sidebar__settings-item img {
+  margin-right: auto;
+}
+
+.admin .sidebar__settings-item span {
+  width: 70%;
+  text-align: left;
+}
+
+.admin .sidebar__settings-item:hover {
+  background-color: #E3F2FD;
+  cursor: pointer;
+}
+
+.admin .sidebar__settings-items {
+  padding: 0rem 2rem 0 2rem;
+}
+
+.admin__content {
+  width: 100%;
+  height: 100%;
+  padding: 15rem 3rem 3rem 3rem;
+  background: #FBFCFD;
+  font-family: 'Lato', sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.admin__content .container {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.admin__content .table {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.admin__content .table__col-user {
+  width: 18%;
+}
+
+.admin__content .table__col-edit-btn {
+  width: 10%;
+}
+
+.admin__content .table__row {
+  background-color: #fff;
+}
+
+.admin__content .table__headers {
+  font-weight: bold;
+  background-color: rgba(224, 224, 224, 0.15);
+}
+
+.admin__content .table td {
+  padding: 1.6rem;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.admin__content .pagination {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  font-size: 13px;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.admin__content .pagination__item {
+  padding: 0.7rem 1.2rem;
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  margin: 0 0.3rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin__content .pagination__item--active, .admin__content .pagination__item:hover {
+  background: #336CFB;
+  color: white;
+}
+
+.auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #2148C0;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.auth-form {
+  width: 21%;
+}
+
+.auth-form__icon {
+  margin-right: 1rem;
+}
+
+.auth-form__login, .auth-form__password {
+  padding: 0.8rem;
+  border-radius: 4px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  z-index: 1000;
+  width: 100%;
+  border: 1px solid white;
+  margin-bottom: 2rem;
+}
+
+.auth-form__login input, .auth-form__password input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.auth-form__login input::-webkit-input-placeholder, .auth-form__password input::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+.auth-form__login input:-ms-input-placeholder, .auth-form__password input:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.auth-form__login input::-ms-input-placeholder, .auth-form__password input::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.auth-form__login input::placeholder, .auth-form__password input::placeholder {
+  text-transform: uppercase;
+}
+
+.auth-form__btn-submit {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 4px;
+  background: white;
+  border: none;
+  padding: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.auth-form__forgot-password {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: end;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.auth .bg-sprite {
+  position: absolute;
+}
+
+.auth .bg-sprite__vector {
+  right: 0;
+  top: 0;
+}
+
+.auth .bg-sprite__ellipse-sm {
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.auth .bg-sprite__ellipse-lg {
+  left: 0;
+  top: 0;
+}
+
+.auth .bg-sprite__ellipse-md {
+  left: 0;
+  bottom: 0;
+  z-index: 90;
+}
+/*# sourceMappingURL=styles.css.map */

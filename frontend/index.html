@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page">
+    <section class="page__home-all home-all">
+      <div class="home-all__wrap">
+        <div class="home-all__common">
+          <div class="home-all__col-1">
+            <img src="./img/5.svg" alt="" class="home-all__profile" />
+            <div class="home-all__name">
+              <h2 class="home-all__people">Dastan Akhmet</h2>
+              <img src="./img/6.png" alt="" class="home-all__circle" />
+            </div>
+
+            <div class="home-all__top">
+              <ul class="home-all__list1">
+                <li class="home-all__item1 home-all__item1">
+                  <button class="home-all__btn home-all__btn--first">
+                    <img src="./img/1.svg" alt="" class="home-all__icon" />
+                    <p class="home-all__text">Entry Records</p>
+                  </button>
+                </li>
+                <li class="home-all__item1">
+                  <button class="home-all__btn">
+                    <img src="./img/2.svg" alt="" class="home-all__icon" />
+                    <p class="home-all__text">My Tasks</p>
+                  </button>
+                </li>
+              </ul>
+              <ul class="home-all__list2">
+                <h2 class="home-all__settings">Settings</h2>
+                <li class="home-all__item1">
+                  <button class="home-all__btn">
+                    <img src="./img/3.svg" alt="" class="home-all__icon" />
+                    <p class="home-all__text">Main Settings</p>
+                  </button>
+                </li>
+                <li class="home-all__item1">
+                  <button class="home-all__btn">
+                    <img src="./img/4.svg" alt="" class="home-all__icon" />
+                    <p class="home-all__text">Notifications</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="home-all__col-2 home-second">
+            <div class="home-second__common">
+              <div class="home-second__col-1">
+                <ul class="home-second__list">
+                  <li class="home-second__item">
+                    <p class="home-second__text">Today</p>
+                    <p class="home-second__suntext">8h 45m</p>
+                  </li>
+                  <li class="home-second__item">
+                    <p class="home-second__text">This week</p>
+                    <p class="home-second__suntext">45h 45m</p>
+                  </li>
+                  <li class="home-second__item">
+                    <p class="home-second__text">This month</p>
+                    <p class="home-second__suntext">231h 45m</p>
+                  </li>
+                  <li class="home-second__item">
+                    <p class="home-second__text">Required</p>
+                    <p class="home-second__suntext">40h</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="home-second__col-2">
+                <h3 class="home-second__text1">Entry Records</h3>
+
+                <table class="home-second__table">
+                  <colgroup span="8"></colgroup>
+                  <tr class="home-second__tr" id="home-second__tr-headers">
+                    <th class="home-second__th">User</th>
+                    <th class="home-second__th">Date</th>
+                    <th class="home-second__th">Arrive Time</th>
+                    <th class="home-second__th">Exit Time</th>
+                    <th class="home-second__th">Total hours</th>
+                    <th class="home-second__th">Status</th>
+                    <th class="home-second__th">Comments</th>
+                    <th>
+                      <button class="home-second__record record">
+                        Add record
+                      </button>
+                    </th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-all__modal modal hidden">
+        <button class="close-modal">&times;</button>
+        <h1>Create record</h1>
+        <form action="" class="home-form__form" id="home-form__create-record">
+          <p class="home-all__form-text">Entry date</p>
+          <input
+            class="home-all_date date"
+            id="date"
+            type="datetime-local"
+            value="2021-01-01"
+          />
+          <p class="home-all__form-text">Exit date</p>
+          <input
+            class="home-all_date date"
+            id="date"
+            type="datetime-local"
+            value="2021-01-01"
+          />
+
+          <p class="home-all__form-text-sub">Update comment</p>
+          <input class="comment" type="text" placeholder="Enter comment" />
+
+          <button class="home-all__submit" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="home-all__modal1 modal1 hidden1">
+          <button class="close-modal1">&times;</button>
+          <h1>Update record</h1>
+          <form action="" class="home-form__form form1" id="home-form__update-record">
+            <p class="home-all__form1-text form1-text">Arrive time</p>
+            <input type="datetime-local" id="appt" name="appt" 
+            min="09:00" max="18:00" required>
+            <p class="home-all__form-text">Exit time</p>
+            <input type="datetime-local" id="appt" name="appt"
+            min="09:00" max="18:00" required>
+            <p class="home-all__form-text">Date</p>
+            <input class="home-all_date date" id="date" type="date" value="2021-01-01">
+            <input class="comment"type="text" placeholder="status">
+
+
+            <p class="home-all__form-text-sub">Update comment</p>
+            <input class="comment"type="text" placeholder="Enter comment">
+
+           <button class="home-all__submit" type="submit" id="create-submit-btn"> Submit</button>
+          </form>
+        </div>
+
+      </div>
+      <div class="overlay hidden"></div>
+
+
+   
+
+    </section>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

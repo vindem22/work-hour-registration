@@ -4,7 +4,6 @@ from api.models import AbsenseRecord, Employee, Record
 from rest_framework import serializers
 from authentication.exceptions import CustomValidationError
 class EmployeeSerializer(serializers.ModelSerializer):
-    flex_status = serializers.IntegerField()
 
     class Meta:
         model = Employee
@@ -15,7 +14,9 @@ class EmployeeSerializer(serializers.ModelSerializer):
             'req_hours',
             'work_hours',
             'email',
-            'flex_status'
+            'flex_status',
+            'records_count',
+            'absent_records'
         )
 
 class RecordSerializer(serializers.ModelSerializer):
@@ -38,14 +39,15 @@ class RecordCreateSerializer(serializers.Serializer):
         errors = {}
         if not attrs.get('employee_id'):
             errors['employee_id'] = ['employee is not set']
-        else:
-            if Record.objects.filter(employee_id=attrs.get('employee_id'),date=datetime.now()).exists():
-                errors['record'] = ['Today record is created']
+        #else:
+            #if Record.objects.filter(employee_id=attrs.get('employee_id'),date=datetime.now()).exists():
+            #    errors['record'] = ['Today record is created']
         if errors:
             raise CustomValidationError({'errors': errors}, 400)
         return attrs
 
     def create(self, validated_data):
+        
         record = Record.objects.create(
             employee_id = validated_data['employee_id'],
             arrive_time = validated_data.get('arrive_time',datetime.now()),
