@@ -40,6 +40,18 @@ class EmployeeDetailViewSet(viewsets.GenericViewSet,  mixins.CreateModelMixin,
             ser = RecordSerializer(record,many=True)
             return Response({'data': ser.data}, status=status.HTTP_200_OK)
         return Response({'data': "Employee with this id doesnot exist"}, status=status.HTTP_404_NOT_FOUND)
+
+    @action(methods=['post'], 
+        detail=False,
+        url_name='users_absense_record',
+        url_path='users_absense_record',)
+    def users_absense_record(self,request):
+        user_id=request.data.get('employee_id')
+        if Employee.objects.filter(id=user_id).exists():
+            record = Employee.objects.get(id=user_id).absent_records
+            ser = AbsenseRecordSerializer(record,many=True)
+            return Response({'data': ser.data}, status=status.HTTP_200_OK)
+        return Response({'data': "Employee with this id doesnot exist"}, status=status.HTTP_404_NOT_FOUND)
     
 class RecordViewSet(viewsets.GenericViewSet):  
     permission_classes = (HasAccess,)
@@ -112,3 +124,4 @@ class AbsenseRecordViewSet(viewsets.GenericViewSet):
             record.delete()
             return Response({'data':'success'}, status=status.HTTP_200_OK)
         return Response({'data':'Not Found'}, status=status.HTTP_404_NOT_FOUND)
+
