@@ -29,3 +29,4 @@ social-auth-core==4.1.0
 sqlparse==0.4.1
 typing-extensions==3.7.4.3
 urllib3==1.26.4
+coverage==3.6
