@@ -1,0 +1,20 @@
+version: "3.9"
+
+services: 
+  webservice:
+    build: ./backend
+    volumes: 
+      - "./backend/:/usr/app/src"
+    ports: 
+      - "20304:8000"
+    depends_on: 
+      - postgresdb
+  
+  postgresdb: 
+    build: ./docker/postgres
+    environment: 
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=testdb
+    ports: 
+      - "13132:5432"

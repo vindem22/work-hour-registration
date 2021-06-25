@@ -1,5 +1,7 @@
 from django.db import models
 from authentication.models   import CoreUser
+from django.utils import timezone
+
 
 # Create your models here.
 class Employee(models.Model):
@@ -17,6 +19,12 @@ class Employee(models.Model):
         verbose_name_plural = 'Employees'
     
     @property
+    def reports_count(self):
+        return AbsenseRecord.objects.filter(employee_id = self.id).count()
+    @property
+    def work_hours_total(self):
+        return self.objects.aggregate(models.Sum('work_hours'))
+    @property
     def flex_status(self):
         return self.req_hours - self.work_hours
     @property
@@ -29,10 +37,10 @@ class Employee(models.Model):
 
 class Record(models.Model):
     employee = models.ForeignKey(Employee,on_delete=models.CASCADE,related_name="records")
-    arrive_time = models.DateTimeField(auto_now_add=True)
+    arrive_time = models.DateTimeField(default=timezone.now())
     exit_time = models.DateTimeField(null=True,default=None)
     status = models.SmallIntegerField(default=0)
-    date = models.DateField(auto_now_add=True)
+    date = models.DateField(default=timezone.now().date())
     class Meta:
         verbose_name = 'Record'
         verbose_name_plural = 'Records'
@@ -42,7 +50,7 @@ class AbsenseRecord(models.Model):
     employee = models.ForeignKey(Employee,on_delete=models.CASCADE,related_name="absent_records") 
     comment = models.TextField()
     date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    end_date = models.DateTimeField(null=True)
 
     class Meta:
         verbose_name = 'AbsenseRecord'
