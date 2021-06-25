@@ -9,8 +9,10 @@
     position: relative;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    
     &-form {
         width: 21%;
+        z-index: 1000;
         &__icon {
             margin-right: 1rem;
         }
@@ -47,6 +49,7 @@
         &__vector {
             right: 0;
             top: 0;
+            z-index: 100;
         }
         &__ellipse-sm {
             left: 0;
@@ -56,6 +59,7 @@
         &__ellipse-lg {
             left: 0;
             top: 0;
+            z-index: 100;
         }
         &__ellipse-md {
             left: 0;

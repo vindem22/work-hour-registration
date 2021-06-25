@@ -222,6 +222,7 @@ html {
 
 .auth-form {
   width: 21%;
+  z-index: 1000;
 }
 
 .auth-form__icon {
@@ -297,6 +298,7 @@ html {
 .auth .bg-sprite__vector {
   right: 0;
   top: 0;
+  z-index: 100;
 }
 
 .auth .bg-sprite__ellipse-sm {
@@ -308,6 +310,7 @@ html {
 .auth .bg-sprite__ellipse-lg {
   left: 0;
   top: 0;
+  z-index: 100;
 }
 
 .auth .bg-sprite__ellipse-md {

@@ -11,17 +11,17 @@
 </head>
 <body>
     <main class="auth">
-        <form class="auth-form">
+        <form action="" class="auth-form">
             <div class="auth-form__content">
                 <div class="auth-form__login">
                     <img src="./images/user.svg" alt="" class="auth-form__icon">
-                    <input type="email" class="auth-form__input" placeholder="username">
+                    <input type="email" id="email" class="auth-form__input" placeholder="username">
                 </div>
                 <div class="auth-form__password">
                     <img src="./images/lock.svg" alt="" class="auth-form__icon">
-                    <input type="password" class="auth-form__input" placeholder="password">
+                    <input type="password" id="password" class="auth-form__input" placeholder="password">
                 </div>
-                <button class="auth-form__btn-submit">Login</button>
+                <button class="auth-form__btn-submit" type='submit'>Login</button>
                 <a href="#" class="auth-form__forgot-password">Forgot password?</a>
             </div>
         </form>
@@ -30,5 +30,6 @@
         <img src="./images/Ellipse-sm.svg" class="bg-sprite bg-sprite__ellipse-sm" alt="">
         <img src="./images/Vector.svg" class="bg-sprite bg-sprite__vector" alt="">
     </main>
+    <script src="./scripts/auth.js"></script>
 </body>
 </html>

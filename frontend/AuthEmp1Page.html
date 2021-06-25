@@ -50,7 +50,7 @@
                 <li class="home-all__item1">
                   <button class="home-all__btn">
                     <img src="./img/2.svg" alt="" class="home-all__icon" />
-                    <p class="home-all__text">My Tasks</p>
+                    <p class="home-all__text">Authorized employees</p>
                   </button>
                 </li>
               </ul>
@@ -74,8 +74,23 @@
           <div class="home-all__col-2 home-second">
             <div class="home-second__common">
               <div class="home-second__col-1">
-                <ul class="home-second__list" id="statistics-bar">
-                  
+                <ul class="home-second__list">
+                  <li class="home-second__item">
+                    <p class="home-second__text">Today</p>
+                    <p class="home-second__suntext">8h 45m</p>
+                  </li>
+                  <li class="home-second__item">
+                    <p class="home-second__text">This week</p>
+                    <p class="home-second__suntext">45h 45m</p>
+                  </li>
+                  <li class="home-second__item">
+                    <p class="home-second__text">This month</p>
+                    <p class="home-second__suntext">231h 45m</p>
+                  </li>
+                  <li class="home-second__item">
+                    <p class="home-second__text">Required</p>
+                    <p class="home-second__suntext">40h</p>
+                  </li>
                 </ul>
               </div>
               <div class="home-second__col-2">
@@ -122,16 +137,9 @@
             type="datetime-local"
             value="2021-01-31T18:30"
           />
-          <p class="home-all__form-text">End date(optional)</p>
-          <input
-            class="home-all_date date"
-            id="date"
-            type="datetime-local"
-            value="2021-01-31T18:30"
-          />
 
-          <p class="home-all__form-text-sub">Add comment</p>
-          <input class="comment" type="text" id="comment" placeholder="Enter comment" />
+          <p class="home-all__form-text-sub">Update comment</p>
+          <input class="comment" type="text" placeholder="Enter comment" />
 
           <button class="home-all__submit" type="submit" id="create-submit-btn">Submit</button>
         </form>
@@ -160,6 +168,10 @@
 
       </div>
       <div class="overlay hidden"></div>
+
+
+   
+
     </section>
     <script src="./scripts/app.js"></script>
   </body>
